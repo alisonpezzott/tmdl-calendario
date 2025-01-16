@@ -11,12 +11,38 @@
         {
           "location": {
             "x": 386,
-            "y": 114
+            "y": 188
           },
           "nodeIndex": "fact_producao",
           "nodeLineageTag": "f978566d-0bc3-4e5d-b11a-05b92e43651d",
           "size": {
             "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 49,
+            "y": 65
+          },
+          "nodeIndex": "dim_calendario",
+          "nodeLineageTag": "f5a387bd-5f7a-4fd2-b5c7-750c2a174121",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 887,
+            "y": 124
+          },
+          "nodeIndex": "gInteligenciaTemporal",
+          "nodeLineageTag": "d79d061c-83b3-4ffc-838f-d2041d5bb5ca",
+          "size": {
+            "height": 128,
             "width": 234
           },
           "zIndex": 0

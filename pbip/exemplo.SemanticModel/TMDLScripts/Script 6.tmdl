@@ -1,12 +1,14 @@
 createOrReplace
 
 	table dim_calendario
+		lineageTag: f5a387bd-5f7a-4fd2-b5c7-750c2a174121
 		dataCategory: Time
 
 		column Data
 			dataType: dateTime
 			isKey
 			formatString: Short Date
+			lineageTag: bd5a399f-8901-4e9b-b54d-23a9567cb022
 			summarizeBy: none
 			sourceColumn: Data
 
@@ -18,6 +20,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Data
+			lineageTag: 48a2ddf7-69f9-4c48-be74-c87b77b49efd
 			summarizeBy: none
 			sourceColumn: DataIndice
 
@@ -27,6 +30,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Data
+			lineageTag: 8eff1a31-fadc-4e33-839c-2ca9b093deeb
 			summarizeBy: none
 			sourceColumn: DiasParaHoje
 
@@ -35,6 +39,7 @@ createOrReplace
 		column DataAtual
 			dataType: string
 			displayFolder: Data
+			lineageTag: 96917d27-5aca-47ec-96ee-8c383da859cb
 			summarizeBy: none
 			sourceColumn: DataAtual
 			sortByColumn: Data
@@ -45,6 +50,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Ano
+			lineageTag: ff1437d7-466d-467e-b20b-325c1b7125ed
 			summarizeBy: none
 			sourceColumn: Ano
 
@@ -54,6 +60,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: Ano
+			lineageTag: 999eccd0-5904-412a-97e6-9d25c0644a9b
 			summarizeBy: none
 			sourceColumn: AnoInicio
 
@@ -65,6 +72,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: Ano
+			lineageTag: a803da5e-f3a0-4ee6-a1ca-fe5cc9867d95
 			summarizeBy: none
 			sourceColumn: AnoFim
 
@@ -76,6 +84,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Ano
+			lineageTag: 7ac40018-f3a4-4569-89fa-a9229f0df718
 			summarizeBy: none
 			sourceColumn: AnoIndice
 
@@ -85,6 +94,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Ano
+			lineageTag: efe828c4-5159-436e-89cf-038184860943
 			summarizeBy: none
 			sourceColumn: AnoDecrescenteNome
 			sortByColumn: AnoDecrescenteNumero
@@ -95,6 +105,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Ano
+			lineageTag: 23b4a48d-a0f8-460e-b1e8-2c0e1b269255
 			summarizeBy: none
 			sourceColumn: AnoDecrescenteNumero
 
@@ -104,6 +115,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Ano
+			lineageTag: 547deace-98a4-49de-8f0f-f8ba76ad468a
 			summarizeBy: none
 			sourceColumn: AnosParaHoje
 
@@ -112,6 +124,7 @@ createOrReplace
 		column AnoAtual
 			dataType: string
 			displayFolder: Ano
+			lineageTag: db7de4aa-ca19-42bb-af07-a7cd190f48e7
 			summarizeBy: none
 			sourceColumn: AnoAtual
 			sortByColumn: Ano
@@ -122,6 +135,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Dia
+			lineageTag: a0d9f8c6-fade-4230-9b3e-b3e9febfc42a
 			summarizeBy: none
 			sourceColumn: DiaDoMes
 
@@ -131,6 +145,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Dia
+			lineageTag: f0d56772-19cf-48b2-9807-23116e245628
 			summarizeBy: none
 			sourceColumn: DiaDoAno
 
@@ -140,6 +155,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Dia
+			lineageTag: 166093f6-0c52-4c27-9b9a-4e712cb162ea
 			summarizeBy: none
 			sourceColumn: DiaDaSemanaNumero
 
@@ -148,6 +164,7 @@ createOrReplace
 		column DiaDaSemanaNome
 			dataType: string
 			displayFolder: Dia
+			lineageTag: 53ee2815-00dd-4da3-83c1-4df2ba9bb5a0
 			summarizeBy: none
 			sourceColumn: DiaDaSemanaNome
 			sortByColumn: DiaDaSemanaNumero
@@ -157,6 +174,7 @@ createOrReplace
 		column DiaDaSemanaNomeAbreviado
 			dataType: string
 			displayFolder: Dia
+			lineageTag: ea8d77c8-076f-4969-a2da-d2714bacd1f8
 			summarizeBy: none
 			sourceColumn: DiaDaSemanaNomeAbreviado
 			sortByColumn: DiaDaSemanaNumero
@@ -166,6 +184,7 @@ createOrReplace
 		column DiaDaSemanaNomeIniciais
 			dataType: string
 			displayFolder: Dia
+			lineageTag: ddfd2e58-6f27-4e19-8037-36fb21281cdc
 			summarizeBy: none
 			sourceColumn: DiaDaSemanaNomeIniciais
 
@@ -175,6 +194,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Mes
+			lineageTag: 4a508277-8a64-42f1-ba5b-08bd23119342
 			summarizeBy: none
 			sourceColumn: MesNumero
 
@@ -183,6 +203,7 @@ createOrReplace
 		column MesNome
 			dataType: string
 			displayFolder: Mes
+			lineageTag: afbce27e-26b3-4e3b-beb6-b9b2be0dee37
 			summarizeBy: none
 			sourceColumn: MesNome
 			sortByColumn: MesNumero
@@ -192,6 +213,7 @@ createOrReplace
 		column MesNomeAbreviado
 			dataType: string
 			displayFolder: Mes
+			lineageTag: 1558492b-743f-46e8-a624-f6097d063bf4
 			summarizeBy: none
 			sourceColumn: MesNomeAbreviado
 			sortByColumn: MesNumero
@@ -201,6 +223,7 @@ createOrReplace
 		column MesNomeIniciais
 			dataType: string
 			displayFolder: Mes
+			lineageTag: 35215135-c7f0-4866-91c4-427eb93f5cde
 			summarizeBy: none
 			sourceColumn: MesNomeIniciais
 
@@ -209,6 +232,7 @@ createOrReplace
 		column MesAnoNome
 			dataType: string
 			displayFolder: Mes
+			lineageTag: 1041d9cb-358c-4650-9023-2c92cc020dbd
 			summarizeBy: none
 			sourceColumn: MesAnoNome
 			sortByColumn: MesAnoNumero
@@ -219,6 +243,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Mes
+			lineageTag: bf6e0c67-f133-4312-b6dd-7b66140ba9f3
 			summarizeBy: none
 			sourceColumn: MesAnoNumero
 
@@ -228,6 +253,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Mes
+			lineageTag: ec5b3198-bfb5-4fa5-972d-b7b22247a124
 			summarizeBy: none
 			sourceColumn: MesDiaNumero
 
@@ -236,6 +262,7 @@ createOrReplace
 		column MesDiaNome
 			dataType: string
 			displayFolder: Mes
+			lineageTag: 2456a04e-88bc-4a90-832f-6b53ed41819e
 			summarizeBy: none
 			sourceColumn: MesDiaNome
 			sortByColumn: MesDiaNumero
@@ -246,6 +273,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: Mes
+			lineageTag: aef58738-dcf7-4b4c-af1b-e6803ce5ff58
 			summarizeBy: none
 			sourceColumn: MesInicio
 
@@ -257,6 +285,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: Mes
+			lineageTag: 90dd4815-3d55-40af-acf0-9775fa8d1fb6
 			summarizeBy: none
 			sourceColumn: MesFim
 
@@ -268,6 +297,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Mes
+			lineageTag: a0fe3879-5e38-4ccf-b845-c67c69e09cda
 			summarizeBy: none
 			sourceColumn: MesIndice
 
@@ -277,6 +307,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Mes
+			lineageTag: e7eb7dca-51d9-4e4f-b7fc-a71ede94036e
 			summarizeBy: none
 			sourceColumn: MesesParaHoje
 
@@ -285,6 +316,7 @@ createOrReplace
 		column MesAtualNome
 			dataType: string
 			displayFolder: Mes
+			lineageTag: a773b9d6-5771-43cc-8adf-a92cb2b950d1
 			summarizeBy: none
 			sourceColumn: MesAtualNome
 			sortByColumn: MesNumero
@@ -294,6 +326,7 @@ createOrReplace
 		column MesAtualNomeAbreviado
 			dataType: string
 			displayFolder: Mes
+			lineageTag: 0f8439a7-3405-4011-9753-ded14e91e44e
 			summarizeBy: none
 			sourceColumn: MesAtualNomeAbreviado
 			sortByColumn: MesNumero
@@ -303,6 +336,7 @@ createOrReplace
 		column MesAnoAtualNome
 			dataType: string
 			displayFolder: Mes
+			lineageTag: 3297b435-8c82-421b-bd5d-38e728197399
 			summarizeBy: none
 			sourceColumn: MesAnoAtualNome
 			sortByColumn: MesAnoNumero
@@ -313,6 +347,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Trimestre
+			lineageTag: 3be8fe85-8199-4d50-ac05-f29356c45022
 			summarizeBy: none
 			sourceColumn: TrimestreNumero
 
@@ -321,6 +356,7 @@ createOrReplace
 		column TrimestreNome
 			dataType: string
 			displayFolder: Trimestre
+			lineageTag: 82c2dec0-90c3-4f5e-8163-9af249ea5af6
 			summarizeBy: none
 			sourceColumn: TrimestreNome
 			sortByColumn: TrimestreNumero
@@ -330,6 +366,7 @@ createOrReplace
 		column TrimestreAnoNome
 			dataType: string
 			displayFolder: Trimestre
+			lineageTag: bab76cda-45f3-4323-b32f-82e448b7e51e
 			summarizeBy: none
 			sourceColumn: TrimestreAnoNome
 			sortByColumn: TrimestreAnoNumero
@@ -340,6 +377,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Trimestre
+			lineageTag: e29427d8-af65-4180-a525-ceed267a5f65
 			summarizeBy: none
 			sourceColumn: TrimestreAnoNumero
 
@@ -349,6 +387,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: Trimestre
+			lineageTag: aa828b66-d83b-41bc-af8c-8dce5b254c90
 			summarizeBy: none
 			sourceColumn: TrimestreInicio
 
@@ -360,6 +399,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: Trimestre
+			lineageTag: 0daaf98e-409f-404d-a37c-e53505e72e80
 			summarizeBy: none
 			sourceColumn: TrimestreFim
 
@@ -371,6 +411,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Trimestre
+			lineageTag: 13830df1-9a51-4193-aba7-96a5aa51270b
 			summarizeBy: none
 			sourceColumn: TrimestreIndice
 
@@ -380,6 +421,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Trimestre
+			lineageTag: c7a78b5c-2555-453a-ada4-f036355ac674
 			summarizeBy: none
 			sourceColumn: TrimestresParaHoje
 
@@ -388,6 +430,7 @@ createOrReplace
 		column TrimestreAtual
 			dataType: string
 			displayFolder: Trimestre
+			lineageTag: 217a78e3-080e-4711-b6ed-5dd36fe1b241
 			summarizeBy: none
 			sourceColumn: TrimestreAtual
 			sortByColumn: TrimestreNumero
@@ -397,6 +440,7 @@ createOrReplace
 		column TrimestreAnoAtual
 			dataType: string
 			displayFolder: Trimestre
+			lineageTag: 06edb5d9-774d-40d1-a189-2958b5b15375
 			summarizeBy: none
 			sourceColumn: TrimestreAnoAtual
 			sortByColumn: TrimestreAnoNumero
@@ -407,6 +451,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Mes
+			lineageTag: 048acf10-a21e-4ea6-b853-80388d835f33
 			summarizeBy: none
 			sourceColumn: MesDoTrimestreNumero
 
@@ -416,6 +461,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semana
+			lineageTag: 85170629-eb44-4af1-9a1e-f369b09289ba
 			summarizeBy: none
 			sourceColumn: SemanaDoAnoNumeroISO
 
@@ -425,6 +471,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semana
+			lineageTag: e00c5018-b94e-4cd3-ab63-a8058f2c8f37
 			summarizeBy: none
 			sourceColumn: AnoISO
 
@@ -434,6 +481,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semana
+			lineageTag: b12670b9-9569-4c96-8f8e-11c4c0c4cd2c
 			summarizeBy: none
 			sourceColumn: SemanaAnoNumeroISO
 
@@ -442,6 +490,7 @@ createOrReplace
 		column SemanaAnoNomeISO
 			dataType: string
 			displayFolder: Semana
+			lineageTag: ed178857-1fa9-455c-9ff9-42a8db3dd0ab
 			summarizeBy: none
 			sourceColumn: SemanaAnoNomeISO
 			sortByColumn: SemanaAnoNumeroISO
@@ -452,6 +501,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: Semana
+			lineageTag: 3b3f01b2-c5b7-4b51-809a-cf624fd9e526
 			summarizeBy: none
 			sourceColumn: SemanaInicioISO
 
@@ -463,6 +513,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: Semana
+			lineageTag: 130d6bde-8227-492d-b12a-7d9a80bcd50e
 			summarizeBy: none
 			sourceColumn: SemanaFimISO
 
@@ -474,6 +525,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semana
+			lineageTag: 2999450e-c429-40d9-bcdb-f2ba856ef90c
 			summarizeBy: none
 			sourceColumn: SemanaIndiceISO
 
@@ -483,6 +535,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semana
+			lineageTag: fa901fec-576f-4335-82a5-97d1273cc4f9
 			summarizeBy: none
 			sourceColumn: SemanasParaHojeISO
 
@@ -491,6 +544,7 @@ createOrReplace
 		column SemanaAtualISO
 			dataType: string
 			displayFolder: Semana
+			lineageTag: 9cc0a66b-b01e-4a09-b06e-7804c825e18c
 			summarizeBy: none
 			sourceColumn: SemanaAtualISO
 			sortByColumn: SemanaAnoNumeroISO
@@ -500,6 +554,7 @@ createOrReplace
 		column SemanaPeriodoNome
 			dataType: string
 			displayFolder: Semana
+			lineageTag: 7ae5fce3-8c4e-47ab-b286-d05fd26d20f8
 			summarizeBy: none
 			sourceColumn: SemanaPeriodoNome
 			sortByColumn: SemanaAnoNumeroISO
@@ -510,6 +565,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semana
+			lineageTag: b9839267-0687-4bdf-a3c6-d9a263ba0c56
 			summarizeBy: none
 			sourceColumn: SemanaDoMesNumero
 
@@ -519,6 +575,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semestre
+			lineageTag: d3267a69-7316-452c-8537-9368dd538709
 			summarizeBy: none
 			sourceColumn: SemestreNumero
 
@@ -527,6 +584,7 @@ createOrReplace
 		column SemestreAnoNome
 			dataType: string
 			displayFolder: Semestre
+			lineageTag: d778016c-f74d-43b3-b4c1-2b6c2d0d7ee0
 			summarizeBy: none
 			sourceColumn: SemestreAnoNome
 			sortByColumn: SemestreAnoNumero
@@ -537,6 +595,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semestre
+			lineageTag: b381aaca-851a-4726-88df-7d00894b4fb4
 			summarizeBy: none
 			sourceColumn: SemestreAnoNumero
 
@@ -546,6 +605,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semestre
+			lineageTag: 45557959-f039-48a4-b0fd-a688f2e54bce
 			summarizeBy: none
 			sourceColumn: SemestreIndice
 
@@ -555,6 +615,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Semestre
+			lineageTag: 58cb2290-5eea-4d71-b905-ba100639d2f9
 			summarizeBy: none
 			sourceColumn: SemestresParaHoje
 
@@ -563,6 +624,7 @@ createOrReplace
 		column SemestreAtual
 			dataType: string
 			displayFolder: Semestre
+			lineageTag: 52956f0b-3464-4e26-ad3d-ad5e4c9bc1f8
 			summarizeBy: none
 			sourceColumn: SemestreAtual
 			sortByColumn: SemestreAnoNumero
@@ -573,6 +635,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Bimestre
+			lineageTag: 348053d7-6325-43c3-a559-0c0a64dd8606
 			summarizeBy: none
 			sourceColumn: BimestreNumero
 
@@ -581,6 +644,7 @@ createOrReplace
 		column BimestreAnoNome
 			dataType: string
 			displayFolder: Bimestre
+			lineageTag: 4815285a-c011-4d69-a09c-f8064242ec1f
 			summarizeBy: none
 			sourceColumn: BimestreAnoNome
 			sortByColumn: BimestreAnoNumero
@@ -591,6 +655,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Bimestre
+			lineageTag: 08e8d135-b5ba-4808-accb-d2399dc4d482
 			summarizeBy: none
 			sourceColumn: BimestreAnoNumero
 
@@ -600,6 +665,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Bimestre
+			lineageTag: f7e196f2-642c-4faa-96ea-f8fb222fd9fe
 			summarizeBy: none
 			sourceColumn: BimestreIndice
 
@@ -609,6 +675,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Bimestre
+			lineageTag: 1cacc024-2591-441f-b6ab-4e149739f59e
 			summarizeBy: none
 			sourceColumn: BimestresParaHoje
 
@@ -617,6 +684,7 @@ createOrReplace
 		column BimestreAtual
 			dataType: string
 			displayFolder: Bimestre
+			lineageTag: a9248634-b97a-4da9-a3bf-160009b7cdfd
 			summarizeBy: none
 			sourceColumn: BimestreAtual
 			sortByColumn: BimestreAnoNumero
@@ -627,6 +695,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Quinzena
+			lineageTag: 2b21fac3-40b6-4829-9717-d4fdcbfab44b
 			summarizeBy: none
 			sourceColumn: QuinzenaDoMesNumero
 
@@ -636,6 +705,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Quinzena
+			lineageTag: 18442a10-11f8-42ee-953a-90d77b17dd32
 			summarizeBy: none
 			sourceColumn: QuinzenaMesNumero
 
@@ -644,6 +714,7 @@ createOrReplace
 		column QuinzenaMesNome
 			dataType: string
 			displayFolder: Quinzena
+			lineageTag: 1385f806-2225-4ff3-877c-1da93381d2b4
 			summarizeBy: none
 			sourceColumn: QuinzenaMesNome
 			sortByColumn: QuinzenaMesNumero
@@ -654,6 +725,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Quinzena
+			lineageTag: c8a93381-f96e-477d-9391-083a1863830f
 			summarizeBy: none
 			sourceColumn: QuinzenaMesAnoNumero
 
@@ -662,6 +734,7 @@ createOrReplace
 		column QuinzenaMesAnoNome
 			dataType: string
 			displayFolder: Quinzena
+			lineageTag: cb65e497-595f-47d7-8078-84eab867c819
 			summarizeBy: none
 			sourceColumn: QuinzenaMesAnoNome
 			sortByColumn: QuinzenaMesAnoNumero
@@ -672,6 +745,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Quinzena
+			lineageTag: 55684cdb-e312-463c-ac6f-c80f72963306
 			summarizeBy: none
 			sourceColumn: QuinzenaIndice
 
@@ -681,6 +755,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Quinzena
+			lineageTag: ee372eb9-2842-4914-825a-6eba371e7b0b
 			summarizeBy: none
 			sourceColumn: QuinzenasParaHoje
 
@@ -689,6 +764,7 @@ createOrReplace
 		column QuinzenaAtual
 			dataType: string
 			displayFolder: Quinzena
+			lineageTag: 1e6b0c03-acd2-427d-af94-b64fe2878e47
 			summarizeBy: none
 			sourceColumn: QuinzenaAtual
 			sortByColumn: QuinzenaMesAnoNumero
@@ -699,6 +775,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: Fechamento
+			lineageTag: eb94e1bb-6b0b-4ac9-b16b-2536f31ca029
 			summarizeBy: none
 			sourceColumn: DataDeFechamentoRef
 
@@ -710,6 +787,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Fechamento
+			lineageTag: b5f4abdb-f05b-4aa4-8afd-d98d6f63cd1e
 			summarizeBy: none
 			sourceColumn: AnoFechamento
 
@@ -718,6 +796,7 @@ createOrReplace
 		column MesFechamentoNome
 			dataType: string
 			displayFolder: Fechamento
+			lineageTag: 393e9193-db71-4e51-b11f-89f28cf79d87
 			summarizeBy: none
 			sourceColumn: MesFechamentoNome
 			sortByColumn: MesFechamentoNumero
@@ -727,6 +806,7 @@ createOrReplace
 		column MesFechamentoNomeAbreviado
 			dataType: string
 			displayFolder: Fechamento
+			lineageTag: 3f908758-5ee7-427b-88fc-1749fde9a4f4
 			summarizeBy: none
 			sourceColumn: MesFechamentoNomeAbreviado
 			sortByColumn: MesFechamentoNumero
@@ -737,6 +817,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Fechamento
+			lineageTag: 210fad8e-3e09-4edd-8ae7-eca171163231
 			summarizeBy: none
 			sourceColumn: MesFechamentoNumero
 
@@ -745,6 +826,7 @@ createOrReplace
 		column MesAnoFechamentoNome
 			dataType: string
 			displayFolder: Fechamento
+			lineageTag: 735c7048-25f6-4d4f-91ad-dfc38cea0dec
 			summarizeBy: none
 			sourceColumn: MesAnoFechamentoNome
 			sortByColumn: MesAnoFechamentoNumero
@@ -755,6 +837,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Fechamento
+			lineageTag: 2c31970c-0ad3-4bc5-867a-4b4f5da067ef
 			summarizeBy: none
 			sourceColumn: MesAnoFechamentoNumero
 
@@ -764,6 +847,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Estacao
+			lineageTag: b34d8f88-a960-4dea-a622-77022795c30f
 			summarizeBy: none
 			sourceColumn: EstacaoNorteNumero
 
@@ -772,6 +856,7 @@ createOrReplace
 		column EstacaoNorteNome
 			dataType: string
 			displayFolder: Estacao
+			lineageTag: 1eb6af3e-d7ae-414b-a023-733921a18cf5
 			summarizeBy: none
 			sourceColumn: EstacaoNorteNome
 			sortByColumn: EstacaoNorteNumero
@@ -782,6 +867,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: Estacao
+			lineageTag: bb8ee130-853e-4160-b9d7-899c8d648453
 			summarizeBy: none
 			sourceColumn: EstacaoSulNumero
 
@@ -790,6 +876,7 @@ createOrReplace
 		column EstacaoSulNome
 			dataType: string
 			displayFolder: Estacao
+			lineageTag: bfc6d823-00e2-413a-b0be-8f504f57998c
 			summarizeBy: none
 			sourceColumn: EstacaoSulNome
 			sortByColumn: EstacaoSulNumero
@@ -799,6 +886,7 @@ createOrReplace
 		column Feriado
 			dataType: string
 			displayFolder: DiasUteis_Feriados
+			lineageTag: 4029e68a-8d91-48d7-b9db-cb77f31b9d7d
 			summarizeBy: none
 			sourceColumn: Feriado
 
@@ -808,6 +896,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: DiasUteis_Feriados
+			lineageTag: 4338858a-fa6d-42f2-8610-10c3cd7a5bca
 			summarizeBy: none
 			sourceColumn: DiaUtilNumero
 
@@ -816,6 +905,7 @@ createOrReplace
 		column DiaUtilNome
 			dataType: string
 			displayFolder: DiasUteis_Feriados
+			lineageTag: 453b27e2-d4f4-43c0-8636-979b6553d397
 			summarizeBy: none
 			sourceColumn: DiaUtilNome
 
@@ -825,6 +915,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: AnoFiscal
+			lineageTag: 7a844844-88e5-4f45-b445-682cae7cc62b
 			summarizeBy: none
 			sourceColumn: AnoFiscalInicialNumero
 
@@ -834,6 +925,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: AnoFiscal
+			lineageTag: 5d107796-95ab-4aee-800a-09e9eafc52a2
 			summarizeBy: none
 			sourceColumn: AnoFiscalFinalNumero
 
@@ -842,6 +934,7 @@ createOrReplace
 		column AnoFiscal
 			dataType: string
 			displayFolder: AnoFiscal
+			lineageTag: 54659163-970a-4327-a969-a26680435002
 			summarizeBy: none
 			sourceColumn: AnoFiscal
 
@@ -851,6 +944,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: AnoFiscal
+			lineageTag: ec270d8b-78b2-4101-8ba6-27a8fc40814e
 			summarizeBy: none
 			sourceColumn: AnoFiscalInicio
 
@@ -862,6 +956,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: AnoFiscal
+			lineageTag: 7e1b1671-37ca-4e36-9471-2fa33fa2803a
 			summarizeBy: none
 			sourceColumn: AnoFiscalFim
 
@@ -872,6 +967,7 @@ createOrReplace
 		column AnoFiscalAtual
 			dataType: string
 			displayFolder: AnoFiscal
+			lineageTag: a492f63b-d954-40b8-afa4-f2acc15f6084
 			summarizeBy: none
 			sourceColumn: AnoFiscalAtual
 			sortByColumn: AnoFiscal
@@ -882,6 +978,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: AnoFiscal
+			lineageTag: 60cd8eae-52d2-43fa-be8e-7fc6d73caa97
 			summarizeBy: none
 			sourceColumn: AnosFiscaisParaHoje
 
@@ -891,6 +988,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: AnoFiscal
+			lineageTag: 551aa996-b9dd-4ea9-90fb-86722d11365a
 			summarizeBy: none
 			sourceColumn: MesFiscalNumero
 
@@ -899,6 +997,7 @@ createOrReplace
 		column MesFiscalNome
 			dataType: string
 			displayFolder: AnoFiscal
+			lineageTag: 08873fb2-595b-437d-9ee7-46611fbbb845
 			summarizeBy: none
 			sourceColumn: MesFiscalNome
 			sortByColumn: MesFiscalNumero
@@ -908,6 +1007,7 @@ createOrReplace
 		column MesFiscalNomeAbreviado
 			dataType: string
 			displayFolder: AnoFiscal
+			lineageTag: dd7746e7-68ed-4dc4-a270-74d0d8b5612a
 			summarizeBy: none
 			sourceColumn: MesFiscalNomeAbreviado
 			sortByColumn: MesFiscalNumero
@@ -917,6 +1017,7 @@ createOrReplace
 		column MesFiscalAtual
 			dataType: string
 			displayFolder: AnoFiscal
+			lineageTag: 790b0815-d8fb-4e57-8b47-fad146fb1295
 			summarizeBy: none
 			sourceColumn: MesFiscalAtual
 			sortByColumn: MesFiscalNumero
@@ -926,6 +1027,7 @@ createOrReplace
 		column MesAnoFiscalNome
 			dataType: string
 			displayFolder: AnoFiscal
+			lineageTag: 1d031894-2cd1-46e2-91a6-5e829a404c08
 			summarizeBy: none
 			sourceColumn: MesAnoFiscalNome
 			sortByColumn: MesAnoFiscalNumero
@@ -936,6 +1038,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: AnoFiscal
+			lineageTag: fa334f00-b8b0-42a1-bb4e-15a3c516bf55
 			summarizeBy: none
 			sourceColumn: MesAnoFiscalNumero
 
@@ -944,6 +1047,7 @@ createOrReplace
 		column MesAnoFiscalAtual
 			dataType: string
 			displayFolder: AnoFiscal
+			lineageTag: d7bcfcad-901b-4260-8899-1591bda80076
 			summarizeBy: none
 			sourceColumn: MesAnoFiscalAtual
 			sortByColumn: MesAnoFiscalNumero
@@ -954,6 +1058,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: AnoFiscal
+			lineageTag: c1d2eb40-af1a-479a-9947-65bab2dec909
 			summarizeBy: none
 			sourceColumn: MesesFiscaisParaHoje
 
@@ -963,6 +1068,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: TrimestreFiscal
+			lineageTag: 0d8a8654-bf78-4f71-982c-9a34ee5e3124
 			summarizeBy: none
 			sourceColumn: TrimestreFiscalNumero
 
@@ -971,6 +1077,7 @@ createOrReplace
 		column TrimestreFiscalNome
 			dataType: string
 			displayFolder: TrimestreFiscal
+			lineageTag: b150515d-435e-4c3d-9eeb-2387d785cb78
 			summarizeBy: none
 			sourceColumn: TrimestreFiscalNome
 			sortByColumn: TrimestreFiscalNumero
@@ -981,6 +1088,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: TrimestreFiscal
+			lineageTag: 249062f4-9587-4ced-9894-3f39726a1595
 			summarizeBy: none
 			sourceColumn: MesDoTrimestreFiscalNumero
 
@@ -989,6 +1097,7 @@ createOrReplace
 		column AnoTrimestreFiscalNome
 			dataType: string
 			displayFolder: TrimestreFiscal
+			lineageTag: 1dba8301-2c55-44b4-830b-1676571474d6
 			summarizeBy: none
 			sourceColumn: AnoTrimestreFiscalNome
 			sortByColumn: AnoTrimestreFiscalNumero
@@ -999,6 +1108,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: TrimestreFiscal
+			lineageTag: 54fafd52-4d7f-4458-907a-05af2dd2f8af
 			summarizeBy: none
 			sourceColumn: AnoTrimestreFiscalNumero
 
@@ -1008,6 +1118,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: TrimestreFiscal
+			lineageTag: 4146588b-5219-4df0-8dac-88b1a78a37b3
 			summarizeBy: none
 			sourceColumn: TrimestreFiscalInicio
 
@@ -1019,6 +1130,7 @@ createOrReplace
 			dataType: dateTime
 			formatString: Short Date
 			displayFolder: TrimestreFiscal
+			lineageTag: 5e2f1f09-08cb-4056-8bf4-dffd4098cc97
 			summarizeBy: none
 			sourceColumn: TrimestreFiscalFim
 
@@ -1030,6 +1142,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: TrimestreFiscal
+			lineageTag: 75e1d25a-1ee5-4fe2-a501-929195ce0b27
 			summarizeBy: none
 			sourceColumn: TrimestresFiscaisParaHoje
 
@@ -1038,6 +1151,7 @@ createOrReplace
 		column TrimestreFiscalAtual
 			dataType: string
 			displayFolder: TrimestreFiscal
+			lineageTag: 75f82fe2-4981-48f9-9cb8-0610f3ad0b72
 			summarizeBy: none
 			sourceColumn: TrimestreFiscalAtual
 			sortByColumn: AnoTrimestreFiscalNumero
@@ -1048,6 +1162,7 @@ createOrReplace
 			dataType: int64
 			formatString: 0
 			displayFolder: TrimestreFiscal
+			lineageTag: 9467acdc-3137-4c07-bacb-76a1a7bd9877
 			summarizeBy: none
 			sourceColumn: DiaDoTrimestreFiscal
 

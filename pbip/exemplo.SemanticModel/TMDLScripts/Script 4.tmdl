@@ -1,0 +1,10 @@
+createOrReplace
+
+	ref table fact_producao
+
+		measure 'Média de Unidades Produzidas' = ```
+				Average ( 'fact_producao'[UnidadesProduzidas] ) 
+				```
+			formatString: #,0
+			displayFolder: "Médias"
+

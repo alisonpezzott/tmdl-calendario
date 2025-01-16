@@ -1,0 +1,4 @@
+relationship c621d80e-b9b6-527d-57b8-88c82a2e73c9
+	fromColumn: fact_producao.Data
+	toColumn: dim_calendario.Data
+

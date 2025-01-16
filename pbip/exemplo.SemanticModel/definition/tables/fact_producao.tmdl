@@ -5,7 +5,15 @@ table fact_producao
 			SUM ( 'fact_producao'[UnidadesProduzidas] ) 
 			```
 		formatString: #,0
+		displayFolder: Totais
 		lineageTag: 2ec47126-a263-4cf5-8a84-2f9b849cfd31
+
+	measure 'Média de Unidades Produzidas' = ```
+			Average ( 'fact_producao'[UnidadesProduzidas] ) 
+			```
+		formatString: #,0
+		displayFolder: Médias
+		lineageTag: 0e51f37f-751f-4466-b7f3-b1679e030e18
 
 	column Data
 		dataType: dateTime

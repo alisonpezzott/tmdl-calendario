@@ -1,0 +1,11 @@
+createOrReplace
+
+	ref table fact_producao
+
+		measure 'Total de Unidades Produzidas' = ```
+				SUM ( 'fact_producao'[UnidadesProduzidas] ) 
+				```
+			formatString: #,0
+			displayFolder: "Totais"
+			lineageTag: 2ec47126-a263-4cf5-8a84-2f9b849cfd31
+
