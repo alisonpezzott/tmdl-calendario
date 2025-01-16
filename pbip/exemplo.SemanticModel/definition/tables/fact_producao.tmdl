@@ -1,6 +1,12 @@
 table fact_producao
 	lineageTag: f978566d-0bc3-4e5d-b11a-05b92e43651d
 
+	measure 'Total de Unidades Produzidas' = ```
+			SUM ( 'fact_producao'[UnidadesProduzidas] ) 
+			```
+		formatString: #,0
+		lineageTag: 2ec47126-a263-4cf5-8a84-2f9b849cfd31
+
 	column Data
 		dataType: dateTime
 		formatString: Long Date
@@ -22,10 +28,13 @@ table fact_producao
 
 	column UnidadesProduzidas
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 45ad5f4e-85e0-4a60-863d-c96a1b094f3c
 		summarizeBy: sum
 		sourceColumn: UnidadesProduzidas
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
