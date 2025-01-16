@@ -10,3 +10,6 @@ CTRL + H
 Clique em `.*`  
 ^.*lineageTag.*(\r?\n)?  
 CTRL + ALT + ENTER
+
+---
+[Anúncio no blog do Power BI](https://powerbi.microsoft.com/en-us/blog/power-bi-january-2025-feature-summary/)
