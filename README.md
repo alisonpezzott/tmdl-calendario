@@ -1,6 +1,6 @@
 # Calendário TMDL
 
-Copie o código [tmdl_calendario_pt_br](tmdl_calendario_pt_br) cole na guia TMDL no Power BI Desktop e aplique.
+Copie o código [tmdl_calendario_pt_br](https://github.com/alisonpezzott/tmdl-calendario/blob/main/calendario_pt_br.tmdl) cole na guia TMDL no Power BI Desktop e aplique.
 
 
 --- 
