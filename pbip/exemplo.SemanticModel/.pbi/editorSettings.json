@@ -1,0 +1,7 @@
+{
+  "version": "1.0",
+  "autodetectRelationships": true,
+  "parallelQueryLoading": true,
+  "relationshipImportEnabled": true,
+  "shouldNotifyUserOfNameConflictResolution": true
+}

@@ -1,0 +1,341 @@
+createOrReplace
+
+	table gInteligenciaTemporal
+
+		calculationGroup
+
+			calculationItem Atual = SELECTEDMEASURE ( )
+
+			calculationItem 'Ano Anterior' = ```
+										
+					CALCULATE (
+                        SELECTEDMEASURE ( ),
+                        SAMEPERIODLASTYEAR ( DimCalendario[Data] )
+                    )
+					
+					```
+
+			calculationItem 'Atual Vs Ano Anterior' = ```
+					
+					
+					VAR __Anterior = 
+					    CALCULATE ( 
+					        SELECTEDMEASURE ( ),
+					        gInteligenciaTemporal[Item] = "Ano Anterior"
+					    )
+					
+					VAR __Result = 
+					    DIVIDE (
+					        SELECTEDMEASURE ( ) - __Anterior,
+					        ABS ( __Anterior )
+					    )
+					
+					RETURN __Result 
+					        
+					```
+
+				formatStringDefinition = ```
+						"0.0%;-0.0%" 
+						```
+
+			calculationItem 'Mes Anterior' = ```
+					
+					CALCULATE (
+                        SELECTEDMEASURE ( ),
+                        PREVIOUSMONTH ( DimCalendario[Data] )
+                    ) 
+						
+					
+					```
+
+			calculationItem 'Atual Vs Mes Anterior' = ```
+					
+					
+					VAR __Anterior = 
+					    CALCULATE ( 
+					        SELECTEDMEASURE ( ),
+					        gInteligenciaTemporal[Item] = "Mes Anterior"
+					    )
+					
+					VAR __Result = 
+					    DIVIDE (
+					        SELECTEDMEASURE ( ) - __Anterior,
+					        ABS ( __Anterior )
+					    )
+					
+					RETURN __Result 
+					```
+
+				formatStringDefinition = ```
+						"0.0%;-0.0%" 
+						```
+
+			calculationItem 'Semana Anterior' = ```
+					
+					
+					CALCULATE (
+                        SELECTEDMEASURE ( ),
+                        OFFSET (
+                            -1,
+                            ALLSELECTED (
+                                DimCalendario[SemanaAnoNomeISO], 
+                                DimCalendario[SemanaAnoNumeroISO] 
+                            ),
+                            ORDERBY ( DimCalendario[SemanaAnoNumeroISO], ASC )
+                        )
+                    ) 
+					
+					
+					```
+
+			calculationItem 'Atual Vs Semana Anterior' = ```
+					
+					
+					VAR __Atual = SELECTEDMEASURE ( )
+					VAR __Anterior = 
+					    CALCULATE (
+					        SELECTEDMEASURE ( ),
+					        gInteligenciaTemporal[Item] = "Semana Anterior"
+					    ) 
+					
+					VAR __Resultado =
+					    DIVIDE (
+					        __Atual - __Anterior,
+					        ABS ( __Anterior )
+					    ) 
+					
+					RETURN __Resultado 
+					```
+
+				formatStringDefinition = "0.0%;-0.0%"
+
+			calculationItem 'Dia Anterior' = ```
+					
+					    CALCULATE (
+					        SELECTEDMEASURE ( ),
+					        DATEADD ( 
+					            DimCalendario[Data],
+					            -1,
+					            DAY
+					        )
+					    ) 
+					```
+
+			calculationItem 'Atual Vs Dia Anterior' = ```
+					
+					
+					VAR __Atual = SELECTEDMEASURE ( )
+					VAR __Anterior = 
+					    CALCULATE (
+					        SELECTEDMEASURE ( ),
+					        gInteligenciaTemporal[Item] = "Dia Anterior"
+					    ) 
+					
+					VAR __Resultado =
+					    DIVIDE (
+					        __Atual - __Anterior,
+					        ABS ( __Anterior )
+					    ) 
+					
+					RETURN __Resultado 
+					```
+
+				formatStringDefinition = ```
+						"0.0%;-0.0%" 
+						```
+
+			calculationItem 'Trimestre Anterior' = ```			
+
+                    CALCULATE (
+                        SELECTEDMEASURE ( ),
+                        DATEADD ( 
+                            DimCalendario[Data],
+                            -1,
+                            QUARTER
+                        )
+                    ) 
+										
+					```
+
+			calculationItem 'Atual Vs Trimestre Anterior' = ```
+					
+					
+					VAR __Atual = SELECTEDMEASURE ( )
+					VAR __Anterior = 
+					    CALCULATE (
+					        SELECTEDMEASURE ( ),
+					        gInteligenciaTemporal[Item] = "Trimestre Anterior"
+					    ) 
+					
+					VAR __Resultado =
+					    DIVIDE (
+					        __Atual - __Anterior,
+					        ABS ( __Anterior )
+					    ) 
+					
+					RETURN __Resultado 
+					```
+
+			calculationItem 'Media Movel Dias' = ```
+										
+					VAR __Qtd = 3 
+					
+					VAR __InicioRel = -1 * ( __Qtd - 1  )
+					
+					VAR __relacao = 
+					    ALLSELECTED ( DimCalendario[Data] )
+					
+					VAR __tabela =
+					    WINDOW (
+					        __InicioRel, REL,
+					        0, REL,
+					        __relacao,
+					        ORDERBY ( DimCalendario[Data] )
+					    )
+					
+					VAR __Resultado = 
+					    AVERAGEX ( 
+					        __tabela,
+					        SELECTEDMEASURE ( )  
+					    )
+					
+					RETURN __Resultado 
+					```
+
+			calculationItem 'Media Movel Semanas' = ```
+										
+					VAR __Qtd = 3
+					
+					VAR __InicioRel = -1 * ( __Qtd - 1  )
+					
+					VAR __relacao = 
+					    ALLSELECTED ( DimCalendario[SemanaAnoNomeISO], DimCalendario[SemanaAnoNumeroISO] )
+					
+					VAR __tabela =
+					    WINDOW (
+					        __InicioRel, REL,
+					        0, REL,
+					        __relacao,
+					        ORDERBY ( DimCalendario[SemanaAnoNumeroISO] )
+					    )
+					
+					VAR __Resultado = 
+					    AVERAGEX ( 
+					        __tabela,
+					        SELECTEDMEASURE ( )
+					    )
+					
+					RETURN __Resultado 
+					```
+
+			calculationItem 'Media Movel Meses' = ```
+					
+					
+					VAR __Qtd = 3
+					
+					VAR __InicioRel = -1 * ( __Qtd - 1  )
+					
+					VAR __relacao = 
+					    ALLSELECTED ( DimCalendario[MesAnoNome], DimCalendario[MesAnoNumero] )
+					
+					VAR __tabela =
+					    WINDOW (
+					        __InicioRel, REL,
+					        0, REL,
+					        __relacao,
+					        ORDERBY ( DimCalendario[MesAnoNumero] )
+					    )
+					
+					VAR __Resultado = 
+					    AVERAGEX ( 
+					        __tabela,
+					        SELECTEDMEASURE ( ) 
+					    )
+					
+					RETURN __Resultado 
+					
+					```
+
+			calculationItem 'Media Movel Trimestres' = ```
+					
+					
+					VAR __Qtd = 3
+					
+					VAR __InicioRel = -1 * ( __Qtd - 1  )
+					
+					VAR __relacao = 
+					    ALLSELECTED ( DimCalendario[TrimestreAnoNome], DimCalendario[TrimestreAnoNumero] )
+					
+					VAR __tabela =
+					    WINDOW (
+					        __InicioRel, REL,
+					        0, REL,
+					        __relacao,
+					        ORDERBY ( DimCalendario[TrimestreAnoNumero] )
+					    )
+					
+					VAR __Resultado = 
+					    AVERAGEX ( 
+					        __tabela,
+					        SELECTEDMEASURE ( ) 
+					    )
+					
+					RETURN __Resultado 
+					```
+
+			calculationItem 'Acumulado Anual' = ```
+										
+					CALCULATE ( 
+                        SELECTEDMEASURE ( ),
+                        DATESYTD ( DimCalendario[Data] )
+                    )
+					
+					```
+
+			calculationItem 'Acumulado Eterno' = ```
+										
+					VAR __DataContexto = MAX ( DimCalendario[Data] )
+					
+					VAR __Resultado = 
+					    CALCULATE (
+					        SELECTEDMEASURE ( ),
+					        DimCalendario[Data] <= __DataContexto
+					    )
+					
+					RETURN __Resultado 
+
+					```
+
+			calculationItem 'Acumulado Mensal' = ```
+										
+                    CALCULATE (
+                        SELECTEDMEASURE ( ),
+                        DATESMTD ( DimCalendario[Data] )
+                    )
+					
+					```
+
+			calculationItem 'Acumulado Trimestral' = ```
+					
+                    CALCULATE (
+                        SELECTEDMEASURE ( ),
+                        DATESQTD ( DimCalendario[Data] )
+                    )		
+					    
+					```
+
+		column Item
+			dataType: string
+			summarizeBy: none
+			sourceColumn: Name
+			sortByColumn: Ordinal
+
+			annotation SummarizationSetBy = Automatic
+
+		column Ordinal
+			dataType: int64
+			formatString: 0
+			summarizeBy: sum
+			sourceColumn: Ordinal
+
+			annotation SummarizationSetBy = Automatic

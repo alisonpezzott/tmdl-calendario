@@ -1,0 +1,68 @@
+table fact_producao
+	lineageTag: f978566d-0bc3-4e5d-b11a-05b92e43651d
+
+	measure 'Total de Unidades Produzidas' = ```
+			SUM ( 'fact_producao'[UnidadesProduzidas] ) 
+			```
+		formatString: #,0
+		displayFolder: Totais
+		lineageTag: 2ec47126-a263-4cf5-8a84-2f9b849cfd31
+
+	measure 'Média de Unidades Produzidas' = ```
+			Average ( 'fact_producao'[UnidadesProduzidas] ) 
+			```
+		formatString: #,0
+		displayFolder: Médias
+		lineageTag: 0e51f37f-751f-4466-b7f3-b1679e030e18
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b1e97a0c-9d7d-4a33-912b-d86b0b1d5bd0
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Produto
+		dataType: string
+		lineageTag: 52860238-726b-4b04-a6f7-f5f98eb18b46
+		summarizeBy: none
+		sourceColumn: Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnidadesProduzidas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 45ad5f4e-85e0-4a60-863d-c96a1b094f3c
+		summarizeBy: sum
+		sourceColumn: UnidadesProduzidas
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_producao = m
+		mode: import
+		source =
+				let
+				    Fonte = Folder.Files("C:\git\tmdl-calendario\dados_exemplo"),
+				    CsvExtraido = List.Transform( Fonte[Content], each Table.PromoteHeaders(Csv.Document(_, [Delimiter=";"]))),
+				    TabelasCombinadas = Table.Combine(CsvExtraido),
+				    ColunasFormatadas = Table.TransformColumns(TabelasCombinadas,{
+				{"Produto", Text.Upper, type text},
+				{"Data", each DateTime.Date(DateTime.From(_)), type date},
+				{"UnidadesProduzidas", Number.From, Int64.Type}
+				}),
+				    LinhasClassificadas = Table.Sort(ColunasFormatadas,{{"Data", Order.Ascending}})
+				in
+				    LinhasClassificadas
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
